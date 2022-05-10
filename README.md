@@ -1,4 +1,4 @@
-# Functions Understanding
+# Understanding Functions
 This exercise is designed to improve your understanding of functions, function arguments and return statements.
 
 ## Learning Objectives
