@@ -118,4 +118,100 @@ myFunction9(num9c, num9a)
 
 ///////////////////////////////
 // Q10 - What will be logged out on the console when this code runs? Why?
-function 
+function myFunction10(num10a, num10b, num10c) {
+    console.log("Q10", num10c);
+}
+
+const num10a = 10
+const num10b = 1
+const num10c = 20
+
+myFunction10(num10c, num10a, 100)
+
+/* MY EXPECTATION - Accidentally logged this before writing my expectation */
+/*RESULT - myFunction10 on line 129 sends 3 values to line 121, the names of these parameters are unimportant, for order means num10c on 121 becomes 100, and then is logged*/
+
+////////////////////////////
+// Q11 - What will be the value of result when this code runs? Why?
+function myFunction11(num11a, num11b, num10c) {
+    return num11a + num11b + num10c
+}
+
+const num11a = 10
+const num11b = 1
+const num11c = 20
+
+const result11 = myFunction11(1, 1, 1)
+
+console.log("Q11", result11);
+
+/* MY EXPECTATION - Result will be 3, as the nums have all been passed on 144 as 1 (1+1+1), the names of the parameters doesn't matter */
+/*RESULT - I was right!*/
+
+////////////////////////////////
+// Q12 - What will be the value of result when this code runs? Why?
+function getSomeValue() {
+    return 2
+}
+
+function myFunction12(num12a) {
+    const num12b = getSomeValue()
+    return num12a * num12b
+}
+
+const result12 = myFunction12(5)
+
+console.log("Q12", result12);
+
+/* MY EXPECTATION - num12b = 2 from line 153, called in line 158. num12a = 5 from line 162, called in line 157. log will be 10 */
+/*RESULT - I was right!*/
+
+///////////////////////////////
+//Q13 - What will be the value of result when this code runs? Why?
+function getSomeValue13() {
+    return 2
+}
+
+function myFunction13(num13a) {
+    const num13b = getSomeValue13()
+    return num13a * getSomeValue13()
+}
+
+const result13 = myFunction13(5)
+
+console.log("Q13", result13);
+
+/* MY EXPECTATION - num13b = 2, num12a = 5. log will be 10.  */
+/*RESULT - I was right!*/
+
+///////////////////////////////
+//Q14 - What will be the value of result when this code runs? Why?
+function getSomeValue14() {
+    return 2
+}
+
+function myFunction14() {
+    return getSomeValue14() * getSomeValue14()
+}
+
+const result14 = myFunction14(5)
+
+console.log("Q14", result14);
+
+/* MY EXPECTATION - Log 4. myFunction does not call any parameters on line 194, so 5 will not be passed from line 197.*/
+/*RESULT - I was right!*/
+
+////////////////////////////////
+//Q15 - What will be the value of result when this code runs? Why?
+function myFunction15(num15) {
+    if (true) {
+        return -10
+    }
+
+    return num15 * 10
+}
+
+const result15 = myFunction15(5)
+
+/* MY EXPECTATION - Log . */
+/*RESULT - I was right!*/
