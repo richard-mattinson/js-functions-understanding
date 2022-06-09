@@ -212,6 +212,153 @@ function myFunction15(num15) {
 }
 
 const result15 = myFunction15(5)
+console.log("Q15", result15);
 
-/* MY EXPECTATION - Log . */
+/* MY EXPECTATION - Log -10. Any number but 0 is true, so -10 will be returned. */
+/*RESULT - I was right? This seems too simple!*/
+
+////////////////////////////////
+//Q16 - What will be the value of result when this code runs? Why?
+function myFunction16(num16) {
+    if (false) {
+        return -100
+    }
+
+    return num16 * 10
+}
+
+const result16 = myFunction16(5) 
+console.log("Q16", result16)
+
+/* MY EXPECTATION - Log 50. Any number but 0 is true, so -100 will NOT be returned. Num16 is then passed, so it's 5 x 10 on line 227*/
 /*RESULT - I was right!*/
+
+///////////////////////////////
+// Q17 - What will be the value of result when this code runs? Why
+function myFunction17(num17) {
+    return -100
+
+    return num17 * 10
+}
+
+const result17 = myFunction17(5)
+console.log("Q17", result17)
+
+/* MY EXPECTATION - Log -100. 5 is passed in to the function, but not called? So it will simply return -100. The first return means the second is never reached*/
+/*RESULT - I was right!*/
+
+///////////////////////////////
+//Q18 - What will be the value of result when this code runs? Why?
+function myFunction18(num18) {
+    return num18 * 10
+
+    return -100
+}
+
+const result18 = myFunction18(5)
+console.log("Q18", result18)
+
+/* MY EXPECTATION - Log 50. 5 is passed in to the function, then multiplied by the 10. Again the second return is never reached */
+/*RESULT - I was right!*/
+
+///////////////////////////////
+//Q19 - What will be the value of result when this code runs? Why
+function myFunction19(num19a, num19b, num19c) {
+    return num19b
+}
+
+const result19 = myFunction19(5, 10, 15)
+console.log("Q19", result19)
+
+/* MY EXPECTATION - Log 10. Although three numbers are passed in, only num19b (10) is ever called. */
+/*RESULT - I was right!*/
+
+///////////////////////////////
+//Q20 - What will be the value of result when this code runs? Why
+function myFunction20(num20a, num20b, num20c) {
+    return num20a + num20c
+}
+
+const num20a = 20
+const num20b = 200
+const num20c = 1000
+
+const result20 = myFunction20(5, 10, num20c, 15)
+console.log("Q20", result20)
+
+/* MY EXPECTATION - Log 1005. Line 286 passes Num20a passes 5 for num20a, then 1000 for num20c as it calls the const.*/
+/*RESULT - I was right!*/
+
+///////////////////////////////
+//Q21 - What will be the value of result when this code runs? Why
+function myFunction21(num21a, num21b) {
+    const result21 = num21a + num21b
+    return result21
+}
+
+const result21 = myFunction21(10, 21)
+myFunction21(100, 21)
+console.log("Q21", result21)
+
+/* MY EXPECTATION - Log 121. Line 300 replaces the values in the line above, so the result will be 100 + 21.*/
+/*RESULT - WRONG Log 31, result21 is already passed the values before line 300 alters them.*/
+
+///////////////////////////////
+//Q22 - What will be the value of result when this code runs? Why
+function myFunction22(num22a, num22b) {
+    let result22 = num22a + num22b
+    return result22
+}
+
+let result22 = 0
+myFunction22(100, 2)
+console.log("Q22", result22);
+
+/* MY EXPECTATION - Log 0. For the same reason as the last question, .*/
+/*RESULT - Right, though after playing about with order that doesn't seem to matter*/
+
+////////////////////////////////
+//Q23 - What will be the value of result when this code runs? Why
+function myFunction23(num23a, num23b) {
+    result23 = num23a + num23b
+}
+
+let result23 = 0
+myFunction23(100, 2)
+console.log("Q23", result23);
+
+/* MY EXPECTATION - Log still 102?.*/
+/*RESULT - Right!*/
+
+////////////////////////////////
+//Q24 - What will be the value of result when this code runs? Why
+function myFunction24(num24a, num24b) {
+    const result24 = num24a + num24b
+    return 100
+}
+
+const result24 = myFunction24(5, 2)
+console.log("Q24", result24);
+
+/* MY EXPECTATION - Log 100. Return 100 means you'll just get 100?.*/
+/*RESULT - Right!*/
+
+///////////////////////////////
+// Q25 - What will be the printed out by the console log statements when this code runs? Why?
+function myFunction25(a) {
+    let b = 20
+
+    console.log("a:", a);
+    console.log("b:", b);
+    console.log("c:", c);
+}
+
+let a = 1
+let b = 2
+let c = 3
+
+myFunction25(100)
+
+/* MY EXPECTATION - Log a = 100, Log b = 2, Log c = 3. Or b and c will be undefined.*/
+/*RESULT - Half right! b is 20 because that let is inside the function, so has scope priority over the one outside*/
+
